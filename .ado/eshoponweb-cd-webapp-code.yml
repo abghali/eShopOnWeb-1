@@ -40,7 +40,7 @@ stages:
         resourceGroupName: '$(resource-group)'
         location: '$(location)'
         templateLocation: 'Linked artifact'
-        csmFile: '$(Pipeline.Workspace)/Bicep/$(templateFile)'
+        csmFile: '$(Pipeline.Workspace)/infra/$(templateFile)'
         overrideParameters: '-webAppName $(webappname) -location $(location)'
         deploymentMode: 'Incremental'
         deploymentOutputs: 'asp-json'
